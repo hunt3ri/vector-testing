@@ -1,0 +1,13 @@
+# data-loader
+FROM mdillon/postgis
+
+# Add debian unstable repo required for installing gdal 2.
+RUN echo deb http://ftp.uk.debian.org/debian unstable main contrib non-free >> /etc/apt/sources.list
+RUN apt-get update
+
+# install ogr2ogr and gdal
+RUN apt-get -t unstable install -y gdal-bin
+
+ENV POSTGRES_USER postgres
+ENV POSTGRES_DB data-loader
+ENV POSTGRES_PASSWORD geopython

@@ -1,0 +1,10 @@
+#Pycharm
+.idea/
+
+#python
+venv/
+
+postgis-data/*
+!postgis-data/README.md
+geoserver-data/*
+!geoserver-data/README.md

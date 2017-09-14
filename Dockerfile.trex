@@ -1,0 +1,9 @@
+# Dockerfile for t-rex vector tile server
+FROM ubuntu
+
+# download and install t-rex
+RUN apt-get update
+RUN apt-get install -y curl
+RUN curl -O -L https://github.com/pka/t-rex/releases/download/v0.7.8/t-rex-v0.7.8-x86_64-unknown-linux-gnu.deb && dpkg -i t-rex-v0.7.8-x86_64-unknown-linux-gnu.deb
+
+CMD cd /t-rex; t_rex serve --config t-rex.config
