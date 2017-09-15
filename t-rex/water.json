@@ -1,0 +1,28 @@
+{
+   "glyphs":"http://localhost:6868/fonts/{fontstack}/{range}.pbf",
+   "layers":[
+       {
+         "id":"simplified_water_polygons",
+         "source":"simplified_water_polygons",
+         "source-layer":"simplified_water_polygons",
+         "type":"line",
+		   "paint": {
+				"line-color": "rgba(165, 105, 105, 1)"
+		}
+	}
+   ],
+   "metadata":{
+      "mapbox:autocomposite":false,
+      "mapbox:type":"template",
+      "maputnik:renderer":"mbgljs",
+      "openmaptiles:version":"3.x"
+   },
+   "name":"t-rex",
+   "sources":{
+      "simplified_water_polygons":{
+         "type":"vector",
+         "url":"http://localhost:6868/simplified_water_polygons.json"
+      }
+   },
+   "version":8
+}

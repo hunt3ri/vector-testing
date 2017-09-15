@@ -26,7 +26,7 @@ services:
     volumes:
       - c:/dev/docker/data-loader/t-rex:/t-rex
     ports:
-      - "6767:6767"
+      - "6868:6767"
     depends_on:
       - postgis
 volumes:
