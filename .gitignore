@@ -6,5 +6,9 @@ venv/
 
 postgis-data/*
 !postgis-data/README.md
+
 geoserver-data/*
 !geoserver-data/README.md
+
+vector-tiles/*
+!vector-tiles/README.md

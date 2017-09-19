@@ -1,0 +1,14 @@
+# Dockerfile for t-rex vector tile server
+FROM ubuntu:zesty
+
+RUN apt-get update
+
+# Build and install Tippecanoe
+RUN apt-get -y install git build-essential libsqlite3-dev zlib1g-dev \
+    && cd opt \
+    && git clone https://github.com/mapbox/tippecanoe.git tippecanoe \
+    && cd tippecanoe \
+    && git checkout tags/1.24.1 -b v1.24.1 \
+    && make \
+    && make install \
+    && cd /
