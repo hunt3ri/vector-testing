@@ -8,7 +8,7 @@ RUN apt-get -y install git build-essential libsqlite3-dev zlib1g-dev \
     && cd opt \
     && git clone https://github.com/mapbox/tippecanoe.git tippecanoe \
     && cd tippecanoe \
-    && git checkout tags/1.24.1 -b v1.24.1 \
+    && git checkout tags/1.26.0 -b v1.26.0 \
     && make \
     && make install \
     && cd /
