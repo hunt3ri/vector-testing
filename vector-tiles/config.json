@@ -19,7 +19,7 @@
   },
   "data": {
     "populated_places": {
-      "mbtiles": "pop_places_4.mbtiles"
+      "mbtiles": "pop_places_7.mbtiles"
     },
     "world" : {
       "mbtiles": "world.mbtiles"
