@@ -1,0 +1,28 @@
+{
+    "options": {
+    "paths": {
+      "root": ""
+    },
+    "formatEncoding": {
+      "png": 6,
+      "jpeg": 80,
+      "webp": 90
+    }
+  },
+  "styles": {
+    "world": {
+      "style": "populated_places.json",
+      "tilejson": {
+        "bounds": [-179.589979,-85.051129,179.383304,82.483323]
+      }
+    }
+  },
+  "data": {
+    "populated_places": {
+      "mbtiles": "pop_places_4.mbtiles"
+    },
+    "world" : {
+      "mbtiles": "world.mbtiles"
+    }
+  }
+}

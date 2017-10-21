@@ -1,0 +1,91 @@
+{
+  "version": 8,
+  "name": "Populated-Place-Style",
+  "metadata": {
+    "mapbox:autocomposite": true,
+    "mapbox:type": "template"
+  },
+  "center": [
+    0,
+    0
+  ],
+  "zoom": 3,
+  "bearing": 0,
+  "pitch": 0,
+  "sources": {
+    "pop-places-file": {
+      "url": "mbtiles://{populated_places}",
+      "type": "vector"
+    },
+    "world-file": {
+      "url": "mbtiles://{world}",
+      "type": "vector"
+    }
+  },
+  "glyphs": "https://free.tilehosting.com/fonts/{fontstack}/{range}.pbf?key=NnWRiQgsqlIv00Je5IJG",
+  "sprite": "https://s3-eu-west-1.amazonaws.com/maptrunk/public/basic-v9",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "hsl(187, 72%, 76%)"
+      }
+    },
+    {
+      "id": "world",
+      "type": "fill",
+      "source": "world-file",
+      "source-layer": "world2geojson",
+      "paint": {
+        "fill-color": "hsl(151, 41%, 51%)",
+        "fill-outline-color": "hsl(151, 41%, 25%)",
+        "fill-opacity": 0.7
+      }
+    },
+    {
+      "id": "populated-places-labels",
+      "type": "symbol",
+      "source": "pop-places-file",
+      "source-layer": "populated_places_2geoson",
+      "maxzoom": 6,
+       "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+         [
+          "==",
+          "WORLDCITY",
+          1
+        ]
+       ],
+      "layout": {
+        "text-field": "{NAME}",
+        "text-font": [
+          "OpenSans-Regular"
+        ],
+        "icon-image": "marker-15",
+        "icon-size": 1,
+        "text-offset": [
+          0,
+          -0.8
+        ]
+      },
+      "icon-anchor": "center",
+      "text-anchor": "center",
+      "visibility": "visible",
+      "paint": {
+        "text-color": "hsl(0, 0%, 13%)"
+      }
+    }
+  ],
+  "created": "2017-09-20T22:48:57.461Z",
+  "id": "cj7tmeezz1dec2rqg3r0werid",
+  "modified": "2017-09-20T23:07:10.099Z",
+  "owner": "hunteri",
+  "visibility": "private",
+  "draft": false
+}
