@@ -29,16 +29,16 @@
       "id": "background",
       "type": "background",
       "paint": {
-        "background-color": "hsl(187, 72%, 76%)"
+        "background-color": "hsl(203, 100%, 49%)"
       }
     },
     {
       "id": "world",
       "type": "fill",
       "source": "world-file",
-      "source-layer": "world2geojson",
+      "source-layer": "worldgeojson",
       "paint": {
-        "fill-color": "hsl(151, 41%, 51%)",
+        "fill-color": "hsl(155, 100%, 49%)",
         "fill-outline-color": "hsl(151, 41%, 25%)",
         "fill-opacity": 0.7
       }

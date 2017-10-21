@@ -22,7 +22,7 @@
       "mbtiles": "pop_places_7.mbtiles"
     },
     "world" : {
-      "mbtiles": "world.mbtiles"
+      "mbtiles": "world_2.mbtiles"
     }
   }
 }
