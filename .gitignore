@@ -10,5 +10,3 @@ postgis-data/*
 geoserver-data/*
 !geoserver-data/README.md
 
-vector-tiles/*
-!vector-tiles/README.md
