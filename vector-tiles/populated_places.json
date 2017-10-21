@@ -20,6 +20,10 @@
     "world-file": {
       "url": "mbtiles://{world}",
       "type": "vector"
+    },
+    "uk-borders-file": {
+      "url": "mbtiles://{uk_borders}",
+      "type": "vector"
     }
   },
   "glyphs": "https://free.tilehosting.com/fonts/{fontstack}/{range}.pbf?key=NnWRiQgsqlIv00Je5IJG",
@@ -44,24 +48,35 @@
       }
     },
     {
+      "id": "ukborders",
+      "type": "fill",
+      "source": "uk-borders-file",
+      "source-layer": "uk_bordersgeojson",
+      "minzoom": 5,
+      "paint": {
+        "fill-color": "hsl(120, 100%, 49%)",
+        "fill-outline-color": "hsl(151, 41%, 25%)"
+      }
+    },
+    {
       "id": "populated-places-labels",
       "type": "symbol",
       "source": "pop-places-file",
       "source-layer": "populated_places_2geoson",
       "maxzoom": 6,
-       "filter": [
+      "filter": [
         "all",
         [
           "==",
           "$type",
           "Point"
         ],
-         [
+        [
           "==",
           "WORLDCITY",
           1
         ]
-       ],
+      ],
       "layout": {
         "text-field": "{NAME}",
         "text-font": [

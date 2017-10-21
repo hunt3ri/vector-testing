@@ -23,6 +23,9 @@
     },
     "world" : {
       "mbtiles": "world_2.mbtiles"
+    },
+    "uk_borders": {
+      "mbtiles": "uk_borders.mbtiles"
     }
   }
 }
