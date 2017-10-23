@@ -24,6 +24,10 @@
     "uk-borders-file": {
       "url": "mbtiles://{uk_borders}",
       "type": "vector"
+    },
+    "shet-roads-file": {
+      "url": "mbtiles://{shet_roads}",
+      "type": "vector"
     }
   },
   "glyphs": "https://free.tilehosting.com/fonts/{fontstack}/{range}.pbf?key=NnWRiQgsqlIv00Je5IJG",
@@ -40,6 +44,7 @@
       "id": "world",
       "type": "fill",
       "source": "world-file",
+      "maxzoom": 8,
       "source-layer": "worldgeojson",
       "paint": {
         "fill-color": "hsl(155, 100%, 49%)",
@@ -56,6 +61,16 @@
       "paint": {
         "fill-color": "hsl(120, 100%, 49%)",
         "fill-outline-color": "hsl(151, 41%, 25%)"
+      }
+    },
+    {
+      "id": "shet_roads",
+      "type": "line",
+      "minzoom": 6,
+      "source": "shet-roads-file",
+      "source-layer": "shet_roadsgeojson",
+      "paint": {
+        "line-color": "#ff1d00"
       }
     },
     {

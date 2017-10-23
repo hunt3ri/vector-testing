@@ -26,6 +26,9 @@
     },
     "uk_borders": {
       "mbtiles": "uk_borders.mbtiles"
+    },
+    "shet_roads": {
+      "mbtiles": "shet_roads.mbtiles"
     }
   }
 }
